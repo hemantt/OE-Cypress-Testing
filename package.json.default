@@ -1,0 +1,24 @@
+{
+  "name": "oe-cypress-testing",
+  "version": "1.0.0",
+  "description": "Functional testing of OpenEyes using cypress",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToukanLabs/OE-Cypress-Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToukanLabs/OE-Cypress-Testing/issues"
+  },
+  "homepage": "https://github.com/ToukanLabs/OE-Cypress-Testing#readme"
+}
