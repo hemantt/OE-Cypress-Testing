@@ -1,4 +1,4 @@
-/// /  <reference types="cypress" /> 
+///   <reference types="cypress" /> 
 
 // Test starts now ---> 
 describe('001_Visit Website and Login', () => {
