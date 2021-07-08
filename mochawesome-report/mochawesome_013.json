@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-05T10:32:20.354Z",
+    "end": "2021-07-05T10:32:32.750Z",
+    "duration": 12396,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7ffa794-5a68-42e2-b458-b4d922abf727",
+      "title": "",
+      "fullFile": "cypress/integration/002_changecontext_spec.js",
+      "file": "cypress/integration/002_changecontext_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8f8be82-f82a-4f41-b947-c575a5d6f15d",
+          "title": "002_ChangeContext",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "2.1_User clicks on change link",
+              "fullTitle": "002_ChangeContext 2.1_User clicks on change link",
+              "timedOut": null,
+              "duration": 9603,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#change-firm\").should('be.visible').click();",
+              "err": {},
+              "uuid": "343d9f11-bcc5-4d84-bbac-f942d0a6d560",
+              "parentUUID": "d8f8be82-f82a-4f41-b947-c575a5d6f15d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.2_isPopUpDisplayed",
+              "fullTitle": "002_ChangeContext 2.2_isPopUpDisplayed",
+              "timedOut": null,
+              "duration": 292,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".oe-popup>.title\").should('be.visible').should('have.text', 'Select a new Site and/or Context');",
+              "err": {},
+              "uuid": "96bc6773-8794-4be6-bebf-69716272b4ea",
+              "parentUUID": "d8f8be82-f82a-4f41-b947-c575a5d6f15d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.3_User Selects Cataract as Context and Clicks Confirm Change",
+              "fullTitle": "002_ChangeContext 2.3_User Selects Cataract as Context and Clicks Confirm Change",
+              "timedOut": null,
+              "duration": 2330,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"context.json\").then(context => {\n  cy.get('select').then($Other => {\n    $Other.val(context.OptionValue);\n  });\n  cy.get(\".align-right > .green\").click();\n});",
+              "err": {},
+              "uuid": "204cf864-2454-4328-b94b-ee50a852d7e9",
+              "parentUUID": "d8f8be82-f82a-4f41-b947-c575a5d6f15d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.3_Is Chosen Context Visible on Homepage",
+              "fullTitle": "002_ChangeContext 2.3_Is Chosen Context Visible on Homepage",
+              "timedOut": null,
+              "duration": 52,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"context.json\").then(context => {\n  cy.get('#change-firm').parent().should('contain', context.Name);\n});",
+              "err": {},
+              "uuid": "66926794-4069-4ddc-8bda-4bba599317a5",
+              "parentUUID": "d8f8be82-f82a-4f41-b947-c575a5d6f15d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "343d9f11-bcc5-4d84-bbac-f942d0a6d560",
+            "96bc6773-8794-4be6-bebf-69716272b4ea",
+            "204cf864-2454-4328-b94b-ee50a852d7e9",
+            "66926794-4069-4ddc-8bda-4bba599317a5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12277,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-01T16:02:33.029Z",
+    "end": "2021-07-01T16:02:49.784Z",
+    "duration": 16755,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e640c8d0-6cc4-42fb-bfea-149d463d6478",
+      "title": "",
+      "fullFile": "cypress/integration/004_search_spec.js",
+      "file": "cypress/integration/004_search_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0ba5b010-e106-47fd-8d80-a314252ffab4",
+          "title": "004_Search Patient",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "4.1_User enters a Patient ID and Clicks on Search",
+              "fullTitle": "004_Search Patient 4.1_User enters a Patient ID and Clicks on Search",
+              "timedOut": null,
+              "duration": 16336,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"search.json\").then(search => {\n  cy.get(\"#query\").clear().type(search.Patient_ID);\n});\ncy.get(\"#js-find-patient\").should('be.visible').click();",
+              "err": {},
+              "uuid": "a163b57f-07b7-4b6f-9a4b-633496ca096f",
+              "parentUUID": "0ba5b010-e106-47fd-8d80-a314252ffab4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.2_ On succesfull search , User navigates to Patient Overview Page",
+              "fullTitle": "004_Search Patient 4.2_ On succesfull search , User navigates to Patient Overview Page",
+              "timedOut": null,
+              "duration": 347,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".event-header-title\").should('be.visible');",
+              "err": {},
+              "uuid": "ab2c198c-5506-436f-984b-6411b1dd0402",
+              "parentUUID": "0ba5b010-e106-47fd-8d80-a314252ffab4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a163b57f-07b7-4b6f-9a4b-633496ca096f",
+            "ab2c198c-5506-436f-984b-6411b1dd0402"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16683,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

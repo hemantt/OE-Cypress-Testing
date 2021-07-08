@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-05T10:48:03.123Z",
+    "end": "2021-07-05T10:48:19.659Z",
+    "duration": 16536,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "058ac951-ea69-48e2-847e-76a56dff107a",
+      "title": "",
+      "fullFile": "cypress/integration/004_search_spec.js",
+      "file": "cypress/integration/004_search_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9139480e-2f6c-49c6-8e28-f93713020a32",
+          "title": "004_Search Patient",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "4.1_User lands on Patient Overview Page post Successful Search",
+              "fullTitle": "004_Search Patient 4.1_User lands on Patient Overview Page post Successful Search",
+              "timedOut": null,
+              "duration": 16306,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Check Patient Overview has loaded after succesful search\ncy.get(\".event-header-title\").should('be.visible').should('have.text', 'Patient Overview');",
+              "err": {},
+              "uuid": "02bb49ca-f4d0-489a-a60f-476cd8c42490",
+              "parentUUID": "9139480e-2f6c-49c6-8e28-f93713020a32",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "02bb49ca-f4d0-489a-a60f-476cd8c42490"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16306,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
