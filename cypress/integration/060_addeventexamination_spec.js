@@ -497,18 +497,177 @@ describe('060_Add Examination Event', () => {
     //Test to add and verify Pupils
     it('060.36_Add and Verify Pupils', () => { 
        
-        //Make Pupils (Right eye) selection, as mentioned in the POC document (test-script)
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_0_has_abnormality > :nth-child(2)").should('be.visible').click()
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_1_has_abnormality > :nth-child(3)").should('be.visible').click()
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_2_has_abnormality > :nth-child(3)").should('be.visible').click()
+        //For, RAPD selection (right eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
 
-        //Make Pupils (Left eye) selection, as mentioned in the POC document (test-script)
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_0_has_abnormality > :nth-child(2)").should('be.visible').click()
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_1_has_abnormality > :nth-child(3)").should('be.visible').click()
-        cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_2_has_abnormality > :nth-child(3)").should('be.visible').click()
+            //Get the value of Pupils_RAPD_Right, as mentioned in the addexaminationevent json file
+            const cntPupils_RAPD_Right = addexaminationevent.Pupils_RAPD_Right
+        
+            //For the right eye, select accordingly, if the value for Pupils_RAPD_Right, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_RAPD_Right == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_0_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_RAPD_Right, in addexaminationevent json file, is "Yes"
+            if(cntPupils_RAPD_Right == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_0_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_RAPD_Right, in addexaminationevent json file, is "No"
+            if(cntPupils_RAPD_Right == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_0_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
+
+
+        //For, "Poor Dilator" selection (right eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Get the value of Pupils_Poor_Dilator_Right, as mentioned in the addexaminationevent json file
+            const cntPupils_Poor_Dilator_Right = addexaminationevent.Pupils_Poor_Dilator_Right
+        
+            //For the right eye, select accordingly, if the value for Pupils_Poor_Dilator_Right, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_Poor_Dilator_Right == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_1_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_Poor_Dilator_Right, in addexaminationevent json file, is "Yes"
+            if(cntPupils_Poor_Dilator_Right == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_1_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_Poor_Dilator_Right, in addexaminationevent json file, is "No"
+            if(cntPupils_Poor_Dilator_Right == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_1_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
+
+        //For, PEARL selection (right eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Get the value of Pupils_PEARL_Right, as mentioned in the addexaminationevent json file
+            const cntPupils_PEARL_Right = addexaminationevent.Pupils_PEARL_Right
+        
+            //For the right eye, select accordingly, if the value for Pupils_PEARL_Right, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_PEARL_Right == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_2_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_PEARL_Right, in addexaminationevent json file, is "Yes"
+            if(cntPupils_PEARL_Right == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_2_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the right eye, select accordingly, if the value for Pupils_PEARL_Right, in addexaminationevent json file, is "No"
+            if(cntPupils_PEARL_Right == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_right_2_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
+            
+        //For, RAPD selection (left eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Get the value of Pupils_RAPD_Left, as mentioned in the addexaminationevent json file
+            const cntPupils_RAPD_Left = addexaminationevent.Pupils_RAPD_Left
+        
+            //For the left eye, select accordingly, if the value for Pupils_RAPD_Left, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_RAPD_Left == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_0_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_RAPD_Left, in addexaminationevent json file, is "Yes"
+            if(cntPupils_RAPD_Left == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_0_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_RAPD_Left, in addexaminationevent json file, is "No"
+            if(cntPupils_RAPD_Left == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_0_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
+
+
+        //For, "Poor Dilator" selection (left eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Get the value of Pupils_Poor_Dilator_Left, as mentioned in the addexaminationevent json file
+            const cntPupils_Poor_Dilator_Left = addexaminationevent.Pupils_Poor_Dilator_Left
+        
+            //For the left eye, select accordingly, if the value for Pupils_Poor_Dilator_Left, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_Poor_Dilator_Left == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_1_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_Poor_Dilator_Left, in addexaminationevent json file, is "Yes"
+            if(cntPupils_Poor_Dilator_Left == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_1_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_Poor_Dilator_Left, in addexaminationevent json file, is "No"
+            if(cntPupils_Poor_Dilator_Left == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_1_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
+
+        //For, PEARL selection (left eye), under Pupils
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Get the value of Pupils_PEARL_Left, as mentioned in the addexaminationevent json file
+            const cntPupils_PEARL_Left = addexaminationevent.Pupils_PEARL_Left
+        
+            //For the left eye, select accordingly, if the value for Pupils_PEARL_Left, in addexaminationevent json file, is "Not checked"
+            if(cntPupils_PEARL_Left == "Not checked"){
+            
+            //click the "Not checked" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_2_has_abnormality > :nth-child(1)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_PEARL_Left, in addexaminationevent json file, is "Yes"
+            if(cntPupils_PEARL_Left == "Yes"){
+        
+            //click the "Yes" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_2_has_abnormality > :nth-child(2)").should('be.visible').click()
+            }
+        
+            //For the left eye, select accordingly, if the value for Pupils_PEARL_Left, in addexaminationevent json file, is "No"
+            if(cntPupils_PEARL_Left == "No"){
+        
+            //click the "No" radio-button
+            cy.get("#OEModule_OphCiExamination_models_PupillaryAbnormalities_entries_left_2_has_abnormality > :nth-child(3)").should('be.visible').click()
+            }
+        })
 
     })
-
 
     //Save the examination and verify the header of the next page
     it('060.37_Click Save', () => { 
@@ -572,8 +731,8 @@ describe('060_Add Examination Event', () => {
         //Verify that the read-only field is populated with the correct values, as selected above
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             
-            //To investigate below, with the dev team. Not able to lift the value, despite being there.
-            //cy.get(":nth-child(46) > [data-top='8980.65625']").should('be.visible').should('have.value', addexaminationevent.Follow_up_outcome_options + " " + addexaminationevent.Follow_up_quantity_options + " " + addexaminationevent.Follow_up_period_options + " " + "with" + " " + addexaminationevent.Follow_up_role_options)
+        //Verify the full string gets populated with the correct values, as selected above
+        cy.get("#OEModule_OphCiExamination_models_Element_OphCiExamination_ClinicOutcome_entries_0 > td").eq(1).should('be.visible').should('contain', addexaminationevent.Follow_up_outcome_options + " " + addexaminationevent.Follow_up_quantity_options + " " + addexaminationevent.Follow_up_period_options + " " + "with" + " " + addexaminationevent.Follow_up_role_options)
         })
     })
 
@@ -781,28 +940,23 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     it('060.47_Validate History', () => { 
 
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            //To investigate below, with the dev team. Not able to lift the value, despite being there.
 
             //History information to be verified against the data in the addexaminationevent json file
-            //cy.get(".OEModule_OphCiExamination_models_Element_OphCiExamination_History > .element-data > .data-value > .large-text").should('be.visible').should('have.value', addexaminationevent.History + " " + addexaminationevent.Eye + " " + addexaminationevent.Duration + " " + addexaminationevent.Onset + " " + addexaminationevent.Severity + " " )
+            cy.get(".data-value > span").eq(0).should('be.visible').should('contain', addexaminationevent.History + " " + addexaminationevent.Eye + " " + addexaminationevent.Duration + " " + addexaminationevent.Onset + " " + addexaminationevent.Severity + " " )
         })
     })
 
     //Validate Eye Medications
     it('060.48_Validate Eye Medications', () => { 
 
-        //To investigate below, with the dev team. Not able to locate the element, despite being there.
-
         //Scroll to Eye Medications section
-        //cy.get("#view-Eye-Medications-Current > tbody > :nth-child(2) > :nth-child(1)").scrollIntoView().should('be.visible')
+        cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(4).scrollIntoView().should('be.visible')
 
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             
-            //To investigate below, with the dev team. Not able to locate the elements, despite being there.
-
             //Eye Medications information to be verified against the data in the addexaminationevent json file
-            //cy.get("#view-Eye-Medications-Current > tbody > :nth-child(2) > :nth-child(1)").should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_1)
-            //cy.get("#view-Eye-Medications-Stopped > tbody > :nth-child(2) > :nth-child(1)").should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_2)
+            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(4).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_1)
+            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(8).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_2)
         })
     })
 
@@ -935,9 +1089,25 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
         })
     })
 
+    //Validate Pupils
+    it('060.59_Validate Pupils', () => { 
+
+        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+
+            //Pupils (right eye) information to be verified
+            cy.get(".right-eye > .last-left > tbody > :nth-child(1) > :nth-child(2) > .dot-list > li").should('be.visible').contains("RAPD")
+            cy.get(".right-eye > .last-left > tbody > :nth-child(3) > :nth-child(2) > .dot-list > :nth-child(1)").should('be.visible').contains("Poor Dilator")
+            cy.get(".right-eye > .last-left > tbody > :nth-child(3) > :nth-child(2) > .dot-list > :nth-child(2)").should('be.visible').contains("PEARL")
+
+            //Pupils (left eye) information to be verified
+            cy.get(".left-eye > .last-left > tbody > :nth-child(1) > :nth-child(2) > .dot-list > li").should('be.visible').contains("RAPD")
+            cy.get(".left-eye > .last-left > tbody > :nth-child(3) > :nth-child(2) > .dot-list > :nth-child(1)").should('be.visible').contains("Poor Dilator")
+            cy.get(".left-eye > .last-left > tbody > :nth-child(3) > :nth-child(2) > .dot-list > :nth-child(2)").should('be.visible').contains("PEARL")
+        })
+    })
 
     //Validate Anterior Segment
-    it('060.59_Validate Anterior Segment', () => { 
+    it('060.60_Validate Anterior Segment', () => { 
 
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
 
@@ -948,7 +1118,7 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     })
 
     //Validate Macula
-    it('060.60_Validate Macula', () => { 
+    it('060.61_Validate Macula', () => { 
 
         //Scroll to the Macula section
         cy.get(".large-text").eq(6).scrollIntoView().should('be.visible')
@@ -972,7 +1142,7 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     })
 
     //Validate Investigation
-    it('060.61_Validate Investigation', () => { 
+    it('060.62_Validate Investigation', () => { 
 
         //Scroll to the Investigation text
         cy.get(".large-text").eq(6).scrollIntoView().should('be.visible')
@@ -984,7 +1154,7 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     })
 
     //Validate Follow-up
-    it('060.62_Validate Follow-up', () => { 
+    it('060.63_Validate Follow-up', () => { 
           
           cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             //Follow-up text to be verified against the data in the addexaminationevent json file
@@ -993,5 +1163,4 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
   })
 
     //Validattions end here
-
 })
