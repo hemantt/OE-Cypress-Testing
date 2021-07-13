@@ -1,23 +1,22 @@
 ///    <reference types="cypress" /> 
 // Triple Slash Directive for cypress auto suggestions
 
-
-// Before running the test, first perform login, then change-context and then search operations
-before(function() {  
-        
-  //Calling login operation, from command
-  cy.login()
-
-  //Calling change-context operation, from command
-  cy.changecontext()
-
-  //Calling search operation, from command
-  cy.search()
-  
-})
-
 //Test suite for Operation Booking Event
 describe('070_Operation Booking Event', () => {
+
+  // Before running the test, first perform login, then change-context and then search operations
+  before(function() {  
+          
+    //Calling login operation, from command
+    cy.login()
+
+    //Calling change-context operation, from command
+    cy.changecontext()
+
+    //Calling search operation, from command
+    cy.search()
+    
+  })
 
   //Test to check and click the Add Event button
   it('070.1_Check_Add_Event_Button_And_Click', () => { 

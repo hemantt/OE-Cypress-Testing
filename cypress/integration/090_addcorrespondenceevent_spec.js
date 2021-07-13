@@ -1,25 +1,24 @@
 ///    <reference types="cypress" /> 
 // Triple Slash Directive for cypress auto suggestions
 
-
-// Before running the test, first perform login, then change-context and then search operations
-before(function() {  
-        
-  //Calling login operation, from command
-  cy.login()
-
-  //Calling change-context operation, from command
-  cy.changecontext()
-
-  //Calling search operation, from command
-  cy.search()
-  
-})
-
 //Test suite for Add Correspondence Event
 describe('090_Add Correspondence Event', () => {
 
-  //Test to check and click the Add Event button
+  // Before running the test, first perform login, then change-context and then search operations
+  before(function() {  
+          
+    //Calling login operation, from command
+    cy.login()
+
+    //Calling change-context operation, from command
+    cy.changecontext()
+
+    //Calling search operation, from command
+    cy.search()
+    
+  })
+
+//Test to check and click the Add Event button
   it('090.1_Check_Add_Event_Button_And_Click', () => { 
     
     //Check and click the Add Event button

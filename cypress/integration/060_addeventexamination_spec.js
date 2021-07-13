@@ -1,6 +1,9 @@
 ///    <reference types="cypress" /> 
 // Triple Slash Directive for cypress auto suggestions
 
+//Test suite for Add Examination Event
+describe('060_Add Examination Event', () => {
+    
 // Before running the test, first perform login, then change-context and then search operations
 before(function() {  
         
@@ -14,10 +17,7 @@ before(function() {
     cy.search()
     
   })
-  
-//Test suite for Add Examination Event
-describe('060_Add Examination Event', () => {
-    
+
     //Test to check and click the Add Event button
     it('060.1_AddEvent_Examination_isAvailable', () => { 
         
@@ -955,8 +955,8 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             
             //Eye Medications information to be verified against the data in the addexaminationevent json file
-            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(4).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_1)
-            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(8).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_2)
+            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(0).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_1)
+            cy.get("#view-Eye-Medications-Current > tbody > tr >td").eq(4).should('be.visible').should('contain', addexaminationevent.Medication_History_Drug_2)
         })
     })
 
@@ -1121,7 +1121,7 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     it('060.61_Validate Macula', () => { 
 
         //Scroll to the Macula section
-        cy.get(".large-text").eq(6).scrollIntoView().should('be.visible')
+        cy.get(".large-text").eq(8).scrollIntoView().should('be.visible')
 
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
 
@@ -1145,11 +1145,11 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
     it('060.62_Validate Investigation', () => { 
 
         //Scroll to the Investigation text
-        cy.get(".large-text").eq(6).scrollIntoView().should('be.visible')
+        cy.get(".large-text").eq(8).scrollIntoView().should('be.visible')
     
         cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             //Investigation text to be verified against the data in the addexaminationevent json file
-            cy.get(".large-text").eq(6).should('be.visible').contains(addexaminationevent.Investigation_OCT + " " + addexaminationevent.Investigation_B_Scan + " " + addexaminationevent.Investigation_Add + " " + addexaminationevent.Investigation_Visual_Fields + " " + addexaminationevent.Investigation_Topography)
+            cy.get(".large-text").eq(8).should('be.visible').contains(addexaminationevent.Investigation_OCT + " " + addexaminationevent.Investigation_B_Scan + " " + addexaminationevent.Investigation_Add + " " + addexaminationevent.Investigation_Visual_Fields + " " + addexaminationevent.Investigation_Topography)
         })
     })
 
@@ -1158,7 +1158,7 @@ it('060.43_Save_Doctor_Record_And_Verify_Next_Page_Loads', () => {
           
           cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
             //Follow-up text to be verified against the data in the addexaminationevent json file
-            cy.get(".large-text").eq(7).should('be.visible').should('contain', addexaminationevent.Follow_up_outcome_options + " " + addexaminationevent.Follow_up_quantity_options + " " + addexaminationevent.Follow_up_period_options + " " + "with" + " " + addexaminationevent.Follow_up_role_options)
+            cy.get(".large-text").eq(9).should('be.visible').should('contain', addexaminationevent.Follow_up_outcome_options + " " + addexaminationevent.Follow_up_quantity_options + " " + addexaminationevent.Follow_up_period_options + " " + "with" + " " + addexaminationevent.Follow_up_role_options)
         })
   })
 

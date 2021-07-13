@@ -1,20 +1,25 @@
 ///    <reference types="cypress" /> 
 
-// Before running the test, get to a required state
-before(function() {  
-        
-    cy.login()
-    cy.changecontext()
-    cy.search()
-    
-})
-
 // Test Starts now -->
 
 // Checks all the reuired sections are available on the page
 describe('005_Patient Overview Page', () => {
     
-    // Eye Diagnoses
+    // Before running the test, first perform login, then change-context and then search operations
+    before(function() {  
+            
+        //Calling login operation, from command
+        cy.login()
+    
+        //Calling change-context operation, from command
+        cy.changecontext()
+    
+        //Calling search operation, from command
+        cy.search()
+        
+    })
+
+  // Eye Diagnoses
     it('5.1_EyeDiagnoses_isAvailable', () => { 
        
     cy.get("#idg-ele-view-eye-diagnoses>header>.element-title").should('have.text','Eye Diagnoses')

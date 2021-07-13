@@ -1,17 +1,18 @@
 ///    <reference types="cypress" /> 
 
-// Before starting the test, get to a required state
-before(function() {  
-        
-    cy.login()
-
-})
-
 // Test starts now -->
 
 // Checks Message Details on the OE Homepage
 describe('003_LandingPage MessageDetails are available', () => {
     
+    // Before running the test, first perform login, then change-context and then search operations
+    before(function() {  
+            
+        //Calling login operation, from command
+        cy.login()
+        
+    })
+
     // Message Details Header - ID
     it('3.1_Is ID Available', () => { 
        

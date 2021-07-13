@@ -1,16 +1,17 @@
 ///    <reference types="cypress" /> 
 
-// Before starting the test, get to a required state
-before(function() {  
+// Test starts now --> 
+describe('002_ChangeContext', () => {
         
+    // Before running the test, first perform login, then change-context and then search operations
+    before(function() {  
+            
+        //Calling login operation, from command
         cy.login()
         
     })
-    
-    // Test starts now --> 
-    describe('002_ChangeContext', () => {
-        
-        // Click on "Change" link
+
+    // Click on "Change" link
         it('2.1_User clicks on change link', () => { 
             
                     
@@ -52,5 +53,5 @@ before(function() {
                           
         })
     
-    })
+})
     
