@@ -6,7 +6,7 @@
 describe('003_LandingPage MessageDetails are available', () => {
     
     // Before running the test, first perform login, then change-context and then search operations
-    before(function() {  
+    before(() => {  
             
         //Calling login operation, from command
         cy.login()

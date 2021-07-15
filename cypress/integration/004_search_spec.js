@@ -4,7 +4,7 @@
 describe('004_Search Patient', () => {
  
     // Before running the test, first perform login, then change-context and then search operations
-    before(function() {  
+    before(() => {  
             
         //Calling login operation, from command
         cy.login()
