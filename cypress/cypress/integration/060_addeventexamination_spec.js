@@ -273,54 +273,125 @@ before(() => {
     //Search, Add and Verify Systemic Diagnoses
     it('060.26_And_Verify_Systemic_Diagnoses', () => { 
        
-        //Click the button to invoke the popup to have values for selection
-        cy.get("#add-history-systemic-diagnoses").should('be.visible').click()
-        
-        //Search for Systemic Surgery value, as mentioned in the addexaminationevent file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".search").eq(4).should('be.visible').type(addexaminationevent.Systemic_Diagnoses_Search_Term)
-          })
-        
-          //Add for Systemic Surgery value, as mentioned in the addexaminationevent file
-          cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".add-options").eq(9).contains(addexaminationevent.Systemic_Diagnoses_Disorder).parent().click()
-          })
+        cy.get("input#OEModule_OphCiExamination_models_SystemicDiagnoses_no_systemic_diagnoses").then(($checkbox) => {
+            const isChecked = Boolean($checkbox.prop('checked'))
+  
+            //If the checkbox is already checked, then uncheck it, to add Systemic Diagnoses data
+            if(isChecked){
+            
+                cy.get("#OEModule_OphCiExamination_models_SystemicDiagnoses_no_systemic_diagnoses").should('be.visible').click()
 
-        //Click the button to close the popup, post the selections made on the popup window
-        cy.get(".add-icon-btn").eq(4).should('be.visible').click()
-
+                //Click the button to invoke the popup to have values for selection
+                cy.get("#add-history-systemic-diagnoses").should('be.visible').click()
+                
+                //Search for Systemic Surgery value, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".search").eq(4).should('be.visible').type(addexaminationevent.Systemic_Diagnoses_Search_Term)
+                    })
+                
+                //Add for Systemic Surgery value, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".add-options").eq(9).contains(addexaminationevent.Systemic_Diagnoses_Disorder).parent().click()
+                })
+        
+                //Click the button to close the popup, post the selections made on the popup window
+                cy.get(".add-icon-btn").eq(4).should('be.visible').click()
+            }
+            //else, try adding a Systemic Diagnoses record
+            else{
+                cy.get('body').then(($body) => {
+                    
+                    //Add Systemic Diagnoses record, only if there is no existig record
+                    if($body.find('#OEModule_OphCiExamination_models_SystemicDiagnoses_diagnoses_table > tbody > tr > :nth-child(1)').length == 0)
+                    {
+                        //Click the button to invoke the popup to have values for selection
+                        cy.get("#add-history-systemic-diagnoses").should('be.visible').click()
+                        
+                        //Search for Systemic Surgery value, as mentioned in the addexaminationevent file
+                        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                            cy.get(".search").eq(4).should('be.visible').type(addexaminationevent.Systemic_Diagnoses_Search_Term)
+                            })
+                        
+                        //Add for Systemic Surgery value, as mentioned in the addexaminationevent file
+                        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                            cy.get(".add-options").eq(9).contains(addexaminationevent.Systemic_Diagnoses_Disorder).parent().click()
+                        })
+                
+                        //Click the button to close the popup, post the selections made on the popup window
+                        cy.get(".add-icon-btn").eq(4).should('be.visible').click()
+                    }
+                })
+            }
+        })
     })
-
 
     //Add and Verify Allergies
     it('060.27_Add_And_Verify_Allergies', () => { 
 
-        //Click the button to invoke the popup to have values for selection
-        cy.get("#add-allergy-btn").should('be.visible').click()
+        cy.get('body').then(($body) => {
+            
+            //If there is no record for Allergies, then only create one
+            if ($body.find('.js-not-other-allergy').length == 0){
+                //Click the button to invoke the popup to have values for selection
+                cy.get("#add-allergy-btn").should('be.visible').click()
 
-        //Select the Allergies value, as mentioned in the addexaminationevent file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".add-options").eq(10).contains(addexaminationevent.Allergies).parent().click()
-          })
+                //Select the Allergies value, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".add-options").eq(10).contains(addexaminationevent.Allergies).parent().click()
+                })
 
-        //Click the button to close the popup, post the selections made on the popup window
-        cy.get(".add-icon-btn").eq(5).should('be.visible').click()
+                //Click the button to close the popup, post the selections made on the popup window
+                cy.get(".add-icon-btn").eq(5).should('be.visible').click()
 
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            //Verify allergies, as mentioned in the addexaminationevent file
-            cy.get(".js-not-other-allergy").should('be.visible').should('contain', addexaminationevent.Allergies)
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    //Verify allergies, as mentioned in the addexaminationevent file
+                    cy.get(".js-not-other-allergy").should('be.visible').should('contain', addexaminationevent.Allergies)
 
-            //Add reaction, as mentioned in the addexaminationevent file
-            cy.get("#0_reaction_selection").should('be.visible').select(addexaminationevent.Allergies_Reaction)
-          })
+                    //Add reaction, as mentioned in the addexaminationevent file
+                    cy.get("#0_reaction_selection").should('be.visible').select(addexaminationevent.Allergies_Reaction)
+                })
+            }
+
+        })
 
     })
 
     //Test to verify that no previous systemic surgery_Opted
     it('060.28_Ensure_No_Previous_Systemic_Surgery_Opted', () => { 
 
-        //Check the checkbox and verify the same
-        cy.get("#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").should('be.visible').check()
+        //Check if there is already a record
+        cy.get('body').then(($body) => {
+
+            //If there is already a record, then delete it
+            if ($body.find('.oe-i.trash.remove_item').length == 1){
+                cy.get(".oe-i.trash.remove_item").should('be.visible').click()
+
+                cy.wait(3000)
+
+                cy.get("#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").scrollIntoView().should('be.visible')
+
+                //Check the checkbox and verify the same
+                cy.get("#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").should('be.visible').check()
+            }
+            //Else, if there is no record
+            else
+            {
+                //Get the current state of the checkbox
+                cy.get("input#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").then(($checkbox) => {
+                    const isChecked = Boolean($checkbox.prop('checked'))
+
+                    //If the checkbox is already checked, then do nothing
+                    if(isChecked){}
+                    //If the checkbox is not-checked, then check the checkbox
+                    else{
+                        //Check the checkbox and verify the same
+                        cy.get("#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").should('be.visible').check()
+                    }
+                })
+            }
+        })
+
+        //Verify that the checkbox is checked
         cy.get("#OEModule_OphCiExamination_models_SystemicSurgery_no_systemicsurgery").should('be.visible').should('be.checked')
 
     })
@@ -367,50 +438,64 @@ before(() => {
     //Test to add and verify CVI Status
     it('060.31_Add And Verify CVI Status', () => { 
        
-        //Add CVI status date, as mentioned in the addexaminationevent json file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get("#OEModule_OphCiExamination_models_Element_OphCiExamination_CVI_Status_element_date_0").should('be.visible').clear().type(addexaminationevent.CVI_status_date)
-          })
-        
-        //Click the button to invoke the popup to have values for selection
-        cy.get("#show-add-cvi-popup").should('be.visible').click()
+        //Check if there is already a record
+        cy.get('body').then(($body) => {
 
-        //Select the CVI Status, as mentioned in the addexaminationevent json file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".add-options").eq(18).contains(addexaminationevent.CVI_status).parent().click()
-          })
+            //If there is not record, then only add one; otherwise, skip this step
+            if ($body.find('#OEModule_OphCiExamination_models_Element_OphCiExamination_CVI_Status_text').length == 0){
+                //Add CVI status date, as mentioned in the addexaminationevent json file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get("#OEModule_OphCiExamination_models_Element_OphCiExamination_CVI_Status_element_date_0").should('be.visible').clear().type(addexaminationevent.CVI_status_date)
+                })
+                
+                //Click the button to invoke the popup to have values for selection
+                cy.get("#show-add-cvi-popup").should('be.visible').click()
 
-          //Click the button to close the popup, post the selections made on the popup window
-          cy.get(".add-icon-btn").eq(10).should('be.visible').click()
+                //Select the CVI Status, as mentioned in the addexaminationevent json file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".add-options").eq(18).contains(addexaminationevent.CVI_status).parent().click()
+                })
 
-          //Verify the CVI status, as mentioned in the addexaminationevent file
-          cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get("#OEModule_OphCiExamination_models_Element_OphCiExamination_CVI_Status_text").should('be.visible').should('have.text', addexaminationevent.CVI_status)
-          })
+                //Click the button to close the popup, post the selections made on the popup window
+                cy.get(".add-icon-btn").eq(10).should('be.visible').click()
+
+                //Verify the CVI status, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get("#OEModule_OphCiExamination_models_Element_OphCiExamination_CVI_Status_text").should('be.visible').should('have.text', addexaminationevent.CVI_status)
+                })
+            }
+        })
     })
 
 
     //Test to add and verify Family History
     it('060.32_Add And Verify Family History', () => { 
         
-        //Click the button to invoke the popup to have values for selection
-        cy.get("#add-family-history-button").should('be.visible').click()
+        //Check if there is already a record
+        cy.get('body').then(($body) => {
 
-        //Add Family History information, as mentioned in the addexaminationevent file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".add-options").eq(19).contains(addexaminationevent.Family_History_Relative).parent().click()
-            cy.get(".add-options").eq(20).contains(addexaminationevent.Family_History_Side).parent().click()
-            cy.get(".add-options").eq(21).contains(addexaminationevent.Family_History_Condition).parent().click()
-        })
+            //If there is not record, then only add one; otherwise, skip this step
+            if ($body.find('#OEModule_OphCiExamination_models_FamilyHistory_entry_table > tbody > .row-0 > :nth-child(1)').length == 0){
+                //Click the button to invoke the popup to have values for selection
+                cy.get("#add-family-history-button").should('be.visible').click()
 
-        //Click the button to close the popup, post the selections made on the popup window
-        cy.get(".add-icon-btn").eq(11).should('be.visible').click()
+                //Add Family History information, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".add-options").eq(19).contains(addexaminationevent.Family_History_Relative).parent().click()
+                    cy.get(".add-options").eq(20).contains(addexaminationevent.Family_History_Side).parent().click()
+                    cy.get(".add-options").eq(21).contains(addexaminationevent.Family_History_Condition).parent().click()
+                })
 
-        //Verify Family History information, as mentioned in the addexaminationevent file
-        cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
-            cy.get(".row-0").children("td").should('be.visible').contains(addexaminationevent.Family_History_Relative)
-            cy.get(".row-0").children("td").next().should('be.visible').contains(addexaminationevent.Family_History_Side)
-            cy.get(".row-0").children("td").next().next().should('be.visible').contains(addexaminationevent.Family_History_Condition)
+                //Click the button to close the popup, post the selections made on the popup window
+                cy.get(".add-icon-btn").eq(11).should('be.visible').click()
+
+                //Verify Family History information, as mentioned in the addexaminationevent file
+                cy.fixture("addexaminationevent.json").then((addexaminationevent) => {
+                    cy.get(".row-0").children("td").should('be.visible').contains(addexaminationevent.Family_History_Relative)
+                    cy.get(".row-0").children("td").next().should('be.visible').contains(addexaminationevent.Family_History_Side)
+                    cy.get(".row-0").children("td").next().next().should('be.visible').contains(addexaminationevent.Family_History_Condition)
+                })
+            }
         })
     })
 

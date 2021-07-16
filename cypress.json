@@ -1,17 +1,8 @@
 {
     "baseUrl":"https://develop-test.meh.toukan.co",
+
     "viewportWidth": 1280,
     "viewportHeight": 720,
-    "chromeWebSecurity": false,
-    "reporter": "../node_modules/mochawesome/src/mochawesome.js",
-    "reporterOptions": {
-        "overwrite": false,
-        "html": false,
-        "json": true,
-        "charts": true
-    },
-    "supportFile":"cypress/support/index.js",
     "video": false
-
 }
 
