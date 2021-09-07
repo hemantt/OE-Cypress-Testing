@@ -1,0 +1,13 @@
+{
+    "Conclusion": "Copy of clinical details provided for Optician,",
+    "ManagementComments": "TestComments",
+    "Clinic_interval":"9 months",
+    "Photo":"9 months",
+    "OCT":"9 months",
+    "Visual_Fields":"9 months",
+    "Gonio":"Every visit",
+    "HRT":"9 months",
+    "Target_IOP_Right_Eye":"10",
+    "Target_IOP_Left_Eye":"10",
+    "Glucoma_Overall_Plan_Comments":"Overall Plan Test Comment"
+}

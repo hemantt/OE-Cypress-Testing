@@ -1,0 +1,28 @@
+{
+    "Add":"conjunctivitis,",
+    "Add2":"dry eyes,",
+    
+
+    "Dropdown_R":"Lids",
+    "Dropdown_L":"Lids",
+    "Commentbox_R":"No abnormality",
+    "Commentbox_L":"No abnormality",
+
+    "colour_R":"Dark brown",
+    "colour_L":"Dark brown",
+    "thickness_R":"Medium",
+    "thickness_L":"Medium",
+    "Label_R":"No abnormality",
+    "Label_L":"No abnormality",
+
+    "type_R":"Follicular",
+    "type_L":"Follicular",
+    "Hyperaemia_R":"++",
+    "Hyperaemia_L":"++",
+    "Lids_Medical_Commentbox_R":"No abnormality",
+    "Lids_Medical_Commentbox_L":"No abnormality"
+    
+
+
+
+}

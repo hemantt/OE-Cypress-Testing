@@ -1,0 +1,16 @@
+{
+    "Select_booking_note": "Please select booking",
+    "Create_operation_note_header": "Create Operation Note",
+    "Operation_note_header": "Operation note",
+    "Operation_note_created_header": "Operation note created",
+    "Theatre": "Theatre Two",
+    "Surgeon": "Stevens Simon",
+    "Cataract": "Phako incision",
+    "IOL_type": "7SN60WF",
+    "IOL_power": "20",
+    "Predicted_refraction": "10",
+    "Complications": "Corneal odema",
+    "Anaesthetic_Type": "LA",
+    "Anaesthetic_LA_Delivery_Methods": "Topical",
+    "Anaesthetic_Given_by": "Surgeon"
+}

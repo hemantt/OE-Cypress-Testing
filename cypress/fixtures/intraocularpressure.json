@@ -1,0 +1,10 @@
+{
+    "Intraocular_Pressure_Instrument_Right_Eye": "Goldmann",
+    "Intraocular_Pressure_mm_Right_Eye": "0",
+    "Intraocular_Pressure_hg_Right_Eye": "1",
+    "Intraocular_Pressure_Comments_Right_Eye": "Intraocular Pressure Test Comments Right Eye",
+    "Intraocular_Pressure_Instrument_Left_Eye": "Goldmann",
+    "Intraocular_Pressure_mm_Left_Eye": "2",
+    "Intraocular_Pressure_hg_Left_Eye": "3",
+    "Intraocular_Pressure_Comments_Left_Eye": "Intraocular Pressure Test Comments Left Eye"
+}

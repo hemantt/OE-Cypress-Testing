@@ -1,0 +1,218 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-10T07:45:57.016Z",
+    "end": "2021-08-10T07:46:34.265Z",
+    "duration": 37249,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6cc120e6-9fc5-4ec9-af5e-f1af579381bb",
+      "title": "",
+      "fullFile": "cypress/integration/090_addcorrespondenceevent_spec.js",
+      "file": "cypress/integration/090_addcorrespondenceevent_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e709a47-8e50-4239-b24c-e51088c64252",
+          "title": "090_Add Correspondence Event",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "090.1_Check_Add_Event_Button_And_Click",
+              "fullTitle": "090_Add Correspondence Event 090.1_Check_Add_Event_Button_And_Click",
+              "timedOut": null,
+              "duration": 17332,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check and click the Add Event button\ncy.get(\"#add-event\").should('be.visible').click();",
+              "err": {},
+              "uuid": "c95ef216-dcb7-4abe-af24-3879b826574d",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.2_Check_Add_Correspondence_Link_And_Click",
+              "fullTitle": "090_Add Correspondence Event 090.2_Check_Add_Correspondence_Link_And_Click",
+              "timedOut": null,
+              "duration": 11713,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check and click the Add Correspondence Event link\ncy.get(\"#OphCoCorrespondence-link\").should('be.visible').click();",
+              "err": {},
+              "uuid": "cf8e076a-3dfc-4197-9eff-d4b5305a542a",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.3_Check_Add_Correspondence_Page_Loaded_Successfully",
+              "fullTitle": "090_Add Correspondence Event 090.3_Check_Add_Correspondence_Page_Loaded_Successfully",
+              "timedOut": null,
+              "duration": 37,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check that the Correspondence Event page is loaded successfully, by verifying the page-header\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  cy.get('.event-title').should('contain', correspondence.Correspondence_page_header);\n});",
+              "err": {},
+              "uuid": "83623c7a-4263-415d-8565-bde9d8dc9e08",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.4_Add_Letter_Type",
+              "fullTitle": "090_Add Correspondence Event 090.4_Add_Letter_Type",
+              "timedOut": null,
+              "duration": 243,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check and select letter-type value from correspondence.json for Letter_type\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  cy.get(\"#ElementLetter_letter_type_id\").should('be.visible').select(correspondence.Letter_type);\n});",
+              "err": {},
+              "uuid": "9ba9c719-70bd-4171-b059-7dacd8e17e68",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.5_Add_Letter_Body",
+              "fullTitle": "090_Add Correspondence Event 090.5_Add_Letter_Body",
+              "timedOut": null,
+              "duration": 390,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check if iFrame is visible first\ncy.get('iframe#ElementLetter_body_ifr').should('be.visible'); //Get the letter-type value from correspondence.json for Letter_body\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  //Type into the body of iFrame\n  cy.get('iframe#ElementLetter_body_ifr').then($iframe => {\n    const $body = $iframe.contents().find('body');\n    cy.wrap($body).type(correspondence.Letter_body); //Type the letter-body from the correspondence.json for Letter_body\n  });\n});",
+              "err": {},
+              "uuid": "ad097e2c-6bab-406f-a988-e2e5c7f64f89",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.6_Click_Save_And_Print",
+              "fullTitle": "090_Add Correspondence Event 090.6_Click_Save_And_Print",
+              "timedOut": null,
+              "duration": 4123,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check and click the Save button\ncy.get(\"#et_saveprint\").should('be.visible').click();",
+              "err": {},
+              "uuid": "efb31c67-68d8-40e1-876d-164cb985ab98",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "090.7_Check_Correspondence_Event_Created_Succesfully",
+              "fullTitle": "090_Add Correspondence Event 090.7_Check_Correspondence_Event_Created_Succesfully",
+              "timedOut": null,
+              "duration": 3315,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check the header message, for the successful save\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  cy.get('#flash-success').should('contain', correspondence.Successful_save_message);\n}); //Check the letter_type, for the value provided earlier\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  cy.get('.data-value.text-right').eq(1).should('contain', correspondence.Letter_type);\n}); // Check if  the js viewer iFrame is visible first\ncy.get('iframe#pdf-js-viewer').should('be.visible'); //Check the letter-body to have the same value provided in the earlier step\ncy.fixture(\"correspondence.json\").then(correspondence => {\n  //Check into the body of iFrame\n  cy.get('iframe#pdf-js-viewer').then($iframe => {\n    const $body = $iframe.contents().find('body');\n    cy.wrap($body).should('contain', correspondence.Letter_body); //Check if the info entered in letter matches \n  });\n});",
+              "err": {},
+              "uuid": "39a1c85c-e4e4-493e-a850-a35fe4fe6d7e",
+              "parentUUID": "0e709a47-8e50-4239-b24c-e51088c64252",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c95ef216-dcb7-4abe-af24-3879b826574d",
+            "cf8e076a-3dfc-4197-9eff-d4b5305a542a",
+            "83623c7a-4263-415d-8565-bde9d8dc9e08",
+            "9ba9c719-70bd-4171-b059-7dacd8e17e68",
+            "ad097e2c-6bab-406f-a988-e2e5c7f64f89",
+            "efb31c67-68d8-40e1-876d-164cb985ab98",
+            "39a1c85c-e4e4-493e-a850-a35fe4fe6d7e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37153,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
