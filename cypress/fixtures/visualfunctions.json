@@ -1,0 +1,45 @@
+{
+    "Data_R":"Not recorded (Unable to assess, eye missing )",
+    "Data_L":"Not recorded (Unable to assess, eye missing )",
+    "r_comments":"Comments for Right eye",
+    "l_comments":"Comments for Left eye",
+    "r2_comments":"Comments for Right eye",
+    "l2_comments":"Comments for Left eye",
+    "nocomments":"No Items To add",
+    "verifysaveditems_R":"Argyll Robertson",
+    "verifysaveditems_L":"Holmes-Adie",
+    "RAPD_R":"Not checked",
+    "Poor_Dilator_R":"Not checked",
+    "PEARL_R":"Not checked",
+    "RAPD_L":"Not checked",
+    "Poor_Dilator_L":"Not checked",
+    "PEARL_L":"Not checked",
+    "success_message":"Examination created.",
+    
+    "vavalue":"6/6",
+    "vaMethod":"Unaided",
+    "vavalue2":"6/12",
+    "vaMethod2":"Glasses",
+    
+    "nvavalue":"1.2",
+    "nvaMethod":"Unaided",
+    "nvavalue2":"0.7",
+    "nvaMethod2":"Glasses",
+    
+    "cvMethod_R":"Ishihara /21",
+    "cvvalue_R":"3/21",
+    "cvCorrection_R":"Contact Lenses",
+    "cvMethod_L":"Ishihara /24",
+    "cvvalue_L":"3/24",
+    "cvCorrection_L":"Glasses",
+    
+    "verify_saved_items_R":"Argyll Robertson",
+    "verify_saved_items_L":"Holmes-Adie",
+
+    "pupils_list_items_R":"Argyll Robertson",
+    "pupils_list_items_L":"Holmes-Adie",
+    "pupils_comments_R":"Comments for Right eye",
+    "pupils_comments_L":"Comments for Left eye"
+
+
+}

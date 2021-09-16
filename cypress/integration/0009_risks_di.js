@@ -15,8 +15,8 @@ describe('0009_Risks_Element_DI', () => {
     
 
       cy.get('body').then(($body) => {
-        const cnt = $body.find('.oe-i.trash').length
-  
+        const cnt = $body.find('#OEModule_OphCiExamination_models_HistoryRisks_element > div > table > tbody > tr > td + td + td + td > i').length
+
         var i;
         for(i = 0; i <= cnt-1; i++)
         {

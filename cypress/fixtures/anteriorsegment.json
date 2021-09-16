@@ -1,0 +1,8 @@
+{
+    "CCT_Right_Value":"1",
+    "CCT_Left_Value":"1",
+    "CCT_Right_Method_Id":"Optical coherence tomography",
+    "CCT_Left_Method_Id":"Ultrasound pachymetry",
+    "CCT_Right_Comment":"Right Eye Test Comment",
+    "CCT_Left_Comment":"Left Eye Test Comment"
+}

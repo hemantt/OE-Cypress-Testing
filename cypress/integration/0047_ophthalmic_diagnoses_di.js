@@ -21,11 +21,25 @@ describe('0047_Element_Ophthalmic_Diagnoses_DI', () => {
         cy.get('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > thead > tr > :nth-child(2)').should('be.visible').should('contain' , 'Side')
         cy.get('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > thead > tr > :nth-child(3)').should('be.visible').should('contain' , 'Principal')
         cy.get('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > thead > tr > :nth-child(4)').should('be.visible').should('contain' , 'Date')
+
+        cy.get('body').then(($body) => {
+          const cnt = $body.find('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > tbody > tr > td + td + td + td + td > a > i').length
+  
+          var i;
+          for(i = 0; i <= cnt-1; i++)
+          {
+            cy.get('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > tbody > tr > td + td + td + td + td > a > i').eq(0).click()
+            cy.wait(1000)
+    
+          }
+        })
+
       })
+
 
       //Add and verify the Ophthalmic Diagnoses details and values
       it('0047.4_To_Add_And_Verify_Ophthalmic Diagnoses_Details' , () => {
-
+/* NOT sure why is this code was even there
         cy.get('body').then(($body) => {
             const cnt = $body.find('#OEModule_OphCiExamination_models_Element_OphCiExamination_Diagnoses_diagnoses_table > tbody > tr + tr > td + td + td + td + td > a > i').length
       
@@ -37,7 +51,7 @@ describe('0047_Element_Ophthalmic_Diagnoses_DI', () => {
       
             }
           })
-
+*/
         cy.get('#add-ophthalmic-diagnoses').should('be.visible').click()
   
         //Add details

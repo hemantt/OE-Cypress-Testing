@@ -6,5 +6,19 @@
     "Intraocular_Pressure_Instrument_Left_Eye": "Goldmann",
     "Intraocular_Pressure_mm_Left_Eye": "2",
     "Intraocular_Pressure_hg_Left_Eye": "3",
-    "Intraocular_Pressure_Comments_Left_Eye": "Intraocular Pressure Test Comments Left Eye"
+    "Intraocular_Pressure_Comments_Left_Eye": "Intraocular Pressure Test Comments Left Eye",
+    "IOP_History_Instrument_Right_Eye": "Tono-pen",
+    "IOP_History_mm_Right_Eye": "0",
+    "IOP_History_Hg_Right_Eye": "1",
+    "IOP_History_Time_Right_Eye": "2",
+    "IOP_History_Minutes_Right_Eye": ":15",
+    "IOP_History_Date_Right_Eye": "20-08-2021",
+    "IOP_History_Comments_Right_Eye": "IOP History Comments Right Eye",
+    "IOP_History_Instrument_Left_Eye": "Perkins",
+    "IOP_History_mm_Left_Eye": "4",
+    "IOP_History_Hg_Left_Eye": "5",
+    "IOP_History_Time_Left_Eye": "6",
+    "IOP_History_Minutes_Left_Eye": ":30",
+    "IOP_History_Date_Left_Eye": "21-08-2021",
+    "IOP_History_Comments_Left_Eye": "IOP History Comments Left Eye"
 }

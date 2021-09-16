@@ -42,6 +42,47 @@ describe('0203_Glaucoma_Overall_Plan_DI', () => {
         .should('be.visible')
         .should('contain' , 'HRT:')
 
+        cy.get('body').then(($body) => {
+          const cnt = $body.find('[data-element-type-name="Glaucoma Overall Plan"] > div > div + div > div > div').length
+    
+          var i;
+          for(i = 0; i <= cnt-1; i++)
+          {
+          if (i == 0)
+          {
+
+            cy.get('body').then(($body) => {
+              
+              if($body.find('[data-element-type-name="Glaucoma Overall Plan"]>div+div>div+div>div>div.active-form[style="display: none;"]').length>0)
+              {
+              
+                //if the style of i=0 is style="display: none;", then click below link
+              cy.get('[data-element-type-name="Glaucoma Overall Plan"] > div > div + div > div > div + div > div > a')
+              .eq(0).click()
+              }
+            })
+	                    
+	            
+          }
+        
+	        if (i == 2)
+	        {
+            cy.get('body').then(($body) => {
+              
+              if($body.find('[data-element-type-name="Glaucoma Overall Plan"]>div+div>div+div>div>div.active-form[style="display: none;"]').length>0)
+              {
+              
+                //if the style of i=2 is style="display: none;", then click below link
+              cy.get('[data-element-type-name="Glaucoma Overall Plan"] > div > div + div > div > div + div > div > a')
+              .eq(1).click()
+	            }   
+    
+            })
+        
+          
+          }
+        }
+      })
         cy.get('[for="OEModule_OphCiExamination_models_Element_OphCiExamination_OverallManagementPlan[right_target_iop_id]"]')
         .should('be.visible')
         .should('contain' , 'Target IOP:')

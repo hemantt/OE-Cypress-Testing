@@ -1,0 +1,20 @@
+{
+    "OCTM_Image_Type_R":"Spectralis",
+    "OCTM_Maximum_CRT_R":"250",
+    "OCTM_Central_Macular_Thickness_R":"50",
+    "OCTM_Thickness_increase_of_100µm_R":"1",
+    "OCTM_Thickness_increase_of_100µm_saved_R":"Yes",
+    "OCTM_Dry_R":"0",
+    "OCTM_Findings_R":"IRF",
+    "OCTM_Findings_Type_R":"Improving",
+    "OCTM_Comments":"Comments for OCT (manual)",
+    "OCTM_Image_Type_L":"Spectralis",
+    "OCTM_Maximum_CRT_L":"850",
+    "OCTM_Central_Macular_Thickness_L":"1500",
+    "OCTM_Thickness_increase_of_100µm_L":"1",
+    "OCTM_Thickness_increase_of_100µm_saved_L":"Yes",
+    "OCTM_Dry_L":"0",
+    "OCTM_Findings_L":"IRF",
+    "OCTM_Findings_Type_L":"Improving"
+    
+}
