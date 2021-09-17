@@ -106,6 +106,14 @@
         "Events/Examination/0074_glaucomarisk_dv.js",
         "Events/Examination/0204_glaucomaoverallplan_dv.js",
         "Events/Examination/0205_glaucomacurrentplan_dv.js",
-        "Events/Examination/0208_laser_management_dv.js"
+        "Events/Examination/0208_laser_management_dv.js",
+        "Events/ConsentForm/Add_Consent_Form.spec.js",
+        "Events/ConsentForm/Consent_Form_DI.spec.js",
+        "Events/ConsentForm/Consent_Form_DV.spec.js",
+        "Events/ConsentForm/Save_Consent_Form.spec.js",
+        "Events/Correspondence/Add_Correspondence.spec.js",
+        "Events/Correspondence/Correspondence_DI.spec.js",
+        "Events/Correspondence/Correspondence_DV.spec.js",
+        "Events/Correspondence/Save_Correspondence.spec.js"
         ]
 }
