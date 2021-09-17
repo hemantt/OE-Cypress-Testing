@@ -9,3 +9,4 @@ Functional testing using cypress.io
 5. Run cypress using:
     * `npm run cy:open`   For GUI mode
     * `npm run cy:run`    For headless mode
+    * `npm install`       To install dependencies
