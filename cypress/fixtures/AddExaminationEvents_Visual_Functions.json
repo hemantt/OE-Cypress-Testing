@@ -1,0 +1,123 @@
+{
+    "Pupils_ListItems_R":"Argyll Robertson",
+    "Pupils_ListItems_L":"Holmes-Adie",
+    "Pupils_Comments_R":"Comments for Right eye",
+    "Pupils_Comments_L":"Comments for Left eye",
+    "Pupils_RAPD_R":"Not checked",
+    "Pupils_RAPD_L":"Not checked",
+    "Pupils_Poor_Dilator_R":"Not checked",
+    "Pupils_Poor_Dilator_L":"Not checked",
+    "Pupils_PEARL_R":"Not checked",
+    "Pupils_PEARL_L":"Not checked",
+    
+    "Visual_Acuity_Value":"6/6",
+    "Visual_Acuity_Value2":"6/12",
+    "Visual_Acuity_Method":"Unaided",
+    "Visual_Acuity_Method2":"Glasses",
+    "Visual_Acuity_Comments_R":"Comments for Right eye",
+    "Visual_Acuity_Comments_L":"Comments for Left eye",
+    
+    "Near_Visual_Acuity_Value":"1.2",
+    "Near_Visual_Acuity_Method":"Unaided",
+    "Near_Visual_Acuity_Value2":"0.7",
+    "Near_Visual_Acuity_Method2":"Glasses",
+    "Near_Visual_Acuity_Comments_R":"Comments for Right eye",
+    "Near_Visual_Acuity_Comments_L":"Comments for Left eye",
+    
+    "Colour_Vision_Method_R":"Ishihara /21",
+    "Colour_Vision_Method_L":"Ishihara /24",
+    "Colour_Vision_Value_R":"3/21",
+    "Colour_Vision_Value_L":"3/24",
+    "Colour_Vision_Correction_R":"Contact Lenses",    
+    "Colour_Vision_Correction_L":"Glasses",
+     
+    "Contrast_Sensitivity_Sensitivity" : "Pelli Robson" ,
+    "Contrast_Sensitivity_Value" : "0",
+    "Contrast_Sensitivity_Laterality" : "LEFT",
+    "Contrast_Sensitivity_Laterality_Validation" : "L",
+    "Contrast_Sensitivity_Correction" : "Glasses",
+    "Contrast_Sensitivity_Comments" : "Sensitivity Test",
+    
+    "Refraction_Sphere_Right_Eye_Sign" : "+",
+    "Refraction_Sphere_Right_Eye_1" : "1",
+    "Refraction_Sphere_Right_Eye_2" : "0",
+    "Refraction_Sphere_Right_Eye_3" : ".25",
+    
+    
+    "Refraction_Cylinder_Right_Eye_Sign" : "-",
+    "Refraction_Cylinder_Right_Eye_1" : "1",
+    "Refraction_Cylinder_Right_Eye_2" : "0",
+    "Refraction_Cylinder_Right_Eye_3" : ".25",
+    
+
+    "Refraction_Axis_Right_Eye_1" : "1",
+    "Refraction_Axis_Right_Eye_2" : "0",
+    "Refraction_Axis_Right_Eye_3" : "0",
+    "Refraction_Type_Right_Eye" : "Ophthalmologist",
+    "Refraction_Comments_Right_Eye" : "Low Refraction",
+    
+
+    "Refraction_Sphere_Left_Eye_Sign" : "+",
+    "Refraction_Sphere_Left_Eye_1" : "1",
+    "Refraction_Sphere_Left_Eye_2" : "0",
+    "Refraction_Sphere_Left_Eye_3" : ".25",
+    
+    
+    "Refraction_Cylinder_Left_Eye_Sign" : "-",
+    "Refraction_Cylinder_Left_Eye_1" : "1",
+    "Refraction_Cylinder_Left_Eye_2" : "0",
+    "Refraction_Cylinder_Left_Eye_3" : ".25",
+    
+
+    "Refraction_Axis_Left_Eye_1" : "1",
+    "Refraction_Axis_Left_Eye_2" : "0",
+    "Refraction_Axis_Left_Eye_3" : "0",
+    "Refraction_Type_Left_Eye" : "Ophthalmologist",
+    "Refraction_Comments_Left_Eye" : "Low Refraction",
+    "Refraction_Type_Right_Eye_Other" : "Test Refraction Others",
+    "Refraction_Type_Left_Eye_Other" : "Test Refraction Others",    
+
+    "Retinoscopy_Right_Working_Distance_Right_Eye" : "1/3m",
+    "Retinoscopy_Angle_Right_Eye_1" : "1",
+    "Retinoscopy_Angle_Right_Eye_2" : "0",
+    "Retinoscopy_Angle_Right_Eye_3" : "0",
+    "Retinoscopy_P1_Sign_Right_Eye" : "-",
+    "Retinoscopy_P1_Value1_Right_Eye" : "1",
+    "Retinoscopy_P1_Value2_Right_Eye" : "0",
+    "Retinoscopy_P1_Value3_Right_Eye" : ".25",
+    "Retinoscopy_P2_Sign_Right_Eye" : "-",
+    "Retinoscopy_P2_Value1_Right_Eye" : "1",
+    "Retinoscopy_P2_Value2_Right_Eye" : "0",
+    "Retinoscopy_P2_Value3_Right_Eye" : ".25",
+    "Retinoscopy_Comments_Right_Eye" : "Retinoscopy Test Comments",
+    "Retinoscopy_Dilation_Right_Eye" : "Dilated",
+    "Retinoscopy_Right_Eye_Refraction_Validation" : "-11.17",
+    "Retinoscopy_Right_Eye_Val" : "0.00",
+
+
+    "Retinoscopy_Left_Working_Distance_Left_Eye" : "1/3m",
+    "Retinoscopy_Angle_Left_Eye_1" : "1",
+    "Retinoscopy_Angle_Left_Eye_2" : "0",
+    "Retinoscopy_Angle_Left_Eye_3" : "0",
+    "Retinoscopy_P1_Sign_Left_Eye" : "-",
+    "Retinoscopy_P1_Value1_Left_Eye" : "1",
+    "Retinoscopy_P1_Value2_Left_Eye" : "0",
+    "Retinoscopy_P1_Value3_Left_Eye" : ".25",
+    "Retinoscopy_P2_Sign_Left_Eye" : "-",
+    "Retinoscopy_P2_Value1_Left_Eye" : "1",
+    "Retinoscopy_P2_Value2_Left_Eye" : "0",
+    "Retinoscopy_P2_Value3_Left_Eye" : ".25",
+    "Retinoscopy_Comments_Left_Eye" : "Retinoscopy Test Comments",
+    "Retinoscopy_Dilation_Left_Eye" : "Dilated",
+    "Retinoscopy_Left_Eye_Refraction_Validation" : "-11.17",
+    "Retinoscopy_Left_Eye_Val" : "0.00",
+
+
+    "Correction_Given_Order_As_First_Right_Eye" : "Adjusted",
+    "Correction_Given_Refraction__Right_Eye" : "Input Refraction",
+    "Order_As_Adjusted__Right_Eye" : "-3.00 / -0.00 x 0",
+    "Correction_Given_Order_As_Second_Left_Eye" : "Adjusted",
+    "Correction_Given_Refraction_Left_Eye" : "Input Refraction",
+    "Order_As_Adjusted_Left_Eye" : "-3.00 / -0.00 x 0"
+
+}

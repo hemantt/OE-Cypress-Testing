@@ -1,0 +1,19 @@
+{
+    "Adnexal_Add":"conjunctivitis,",
+    "Adnexal_Add2":"dry eyes,",
+    
+    "Lids_Surgical_Colour_R":"Dark brown",
+    "Lids_Surgical_Colour_L":"Dark brown",
+    "Lids_Surgical_Thickness_R":"Medium",
+    "Lids_Surgical_Thickness_L":"Medium",
+    "Lids_Surgical_Label_R":"No abnormality",
+    "Lids_Surgical_Label_L":"No abnormality",
+    
+    "Lids_Medical_Type_R":"Follicular",
+    "Lids_Medical_Type_L":"Follicular",
+    "Lids_Medical_Hyperaemia_R":"++",
+    "Lids_Medical_Hyperaemia_L":"++",
+    "Lids_Medical_CommentBox_R":"No abnormality",
+    "Lids_Medical_CommentBox_L":"No abnormality"
+
+}

@@ -1,6 +1,8 @@
 {
     "Letter_type": "Post-op letter",
     "Letter_body": "Test letter body",
+    "E_Sign_Signatory": "Paul Jacobs",
+    "E_Sign_PIN": "123456",
     "Correspondence_page_header": "Correspondence",
     "Successful_save_message": "Correspondence created"
 }
